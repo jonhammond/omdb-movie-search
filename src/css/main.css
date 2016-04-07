@@ -1,0 +1,21 @@
+.searchBarWrapper {
+  display: flex
+}
+
+.searchBar {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.searchBtn {
+  margin-top: 15px;
+}
+
+.imgWrapper {
+  width: 75px;
+  height: auto;
+}
+
+.img {
+  width:100%;
+}

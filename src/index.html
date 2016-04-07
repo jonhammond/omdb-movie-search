@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="movieApp">
+<head>
+  <meta charset="utf-8">
+  <title>OMDB Movie Search</title>
+  <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="css/main.css">
+</head>
+<body>
+  <div class="container">
+    <div ng-controller="movieController">
+      <div class="searchBarWrapper">
+        <div class="searchBar">
+          <h2>Angular OMDB API Search</h2>
+          <br />
+          <h4>Enter a movie by title.</h4>
+          <form ng-submit="search(); showMe=!showMe">
+            <input ng-model="title" type="text" placeholder="movie title e.g. 'Die Hard'" /><br />
+            <input class="btn btn-primary searchBtn" type="submit" value="Search">
+          </form>
+          <hr />
+        </div>
+      </div>
+      <!-- Search Results -->
+      <div>
+        <!-- <p ng-repeat error in error>
+          {{ error }}
+        </p> -->
+      </div>
+      <div ng-repeat="movie in movies">
+        <div class="col-xs-4">
+          <p>{{ movie.Title }}</p>
+          <div class=imgWrapper>
+            <img class="img" src="{{ movie.Poster }}"/>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+  <script type="text/javascript" src="js/app.js"></script>
+</body>
+</html>
